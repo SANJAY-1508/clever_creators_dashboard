@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Route, Routes, NavLink, useNavigate } from "react-router-dom";
 import DashBoard from "../../pages/DashBoard";
+import Pagesetting from "../../pages/Pagesetting";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { LuDot } from "react-icons/lu";
 import { FaSquarePlus } from "react-icons/fa6";
@@ -52,6 +53,14 @@ const SideBar = ({ onLogout }) => {
                   <MdOutlineDashboard />
                 </span>
                 <span class="list-text">Dashboard</span>
+              </NavLink>
+            </li>
+             <li>
+              <NavLink to="/console/Pagesetting" className="nav-link ">
+                <span className="list-icon">
+                  <MdOutlineDashboard />
+                </span>
+                <span class="list-text">Pagesetting</span>
               </NavLink>
             </li>
           </ul>
@@ -108,6 +117,10 @@ const SideBar = ({ onLogout }) => {
                 <Route
                   path="/console/dashboard"
                   element={<DashBoard />}
+                ></Route>
+                  <Route
+                  path="/console/Pagesetting"
+                  element={<Pagesetting />}
                 ></Route>
               </Routes>
             </div>
